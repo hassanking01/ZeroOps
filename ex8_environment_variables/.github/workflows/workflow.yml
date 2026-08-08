@@ -1,0 +1,11 @@
+name: set up env
+on: push
+env:
+  PROJECT_NAME: "ZeroOps"
+  AUTHOR: "DevOpsTeam"
+jobs:
+  set_up_env:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "$PROJECT_NAME by $AUTHOR"
