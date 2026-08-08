@@ -1,0 +1,15 @@
+name: build
+
+on: push
+
+jobs:
+  job_1:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+      - uses: actions/checkout@v4
+      - run: |
+          python3 --version
+          pwd
+          ls -la
