@@ -1,10 +1,10 @@
 name: set_up_env
 on: push
+env:
+  API_KET: ${{ secrets.API_KEY }}
 jobs:
     set_up_env:
       runs-on: ubuntu-latest
-      env:
-        API_KET: ${{ secrets.API_KET }}
       steps:
         - uses: actions/checkout@v4
-        - run: echo "Key length ${#API_KET}"
+        - run: echo "Key length ${#API_KEY}"
