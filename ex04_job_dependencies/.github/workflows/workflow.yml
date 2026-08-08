@@ -1,0 +1,14 @@
+name: multi_job
+on: push
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - run: echo "Backend tests passing"
+  frontend:
+    needs: backend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - run: echo "Building frontend after backend success"
