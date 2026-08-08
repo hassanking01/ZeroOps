@@ -6,6 +6,8 @@ on:
   pull_request:
     branches:
       - '**'
+env:
+  PROJECT_NAME: "ZeroOps Production"
 jobs:
   set_up_env:
     runs-on: ubuntu-latest
@@ -17,4 +19,4 @@ jobs:
       - run: |
           pip install -r requirements.txt
           python3 -m pytest
-          echo "all success ready for production"
+          echo "all success ready for $PROJECT_NAME"
