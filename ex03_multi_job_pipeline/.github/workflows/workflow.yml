@@ -1,12 +1,12 @@
 name: multi_job
 on: push
 jobs:
-  job_1:
+  backend:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@4
       - run: echo "Testing backend"
-  job_2:
+  frontend:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@4
